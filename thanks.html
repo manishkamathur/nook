@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="icon-32.png">
+<title>Thank you – Nook Lifetime</title>
+<style>
+  /* Layout: one quiet reading column, a plain summary up top, details below. */
+  :root {
+    --bg: #E8E6EE;
+    --paper: #F7F6FA;
+    --ink: #25233A;
+    --ink-2: #5E5A76;
+    --line: #D2CFDC;
+    --accent: #403C86;
+    --lamp: #D99A3D;
+    --voice: 'Lora', 'Iowan Old Style', Georgia, serif;
+    --ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16151F; --paper: #201F2C; --ink: #ECEAF4; --ink-2: #B2AEC6; --line: #34324A; --accent: #ADA8F0; --lamp: #E0A243;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16151F; --paper: #201F2C; --ink: #ECEAF4; --ink-2: #B2AEC6; --line: #34324A; --accent: #ADA8F0; --lamp: #E0A243;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 var(--ui);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 48px 72px;
+  }
+  .page { max-width: 700px; margin: 0 auto; display: grid; gap: 34px; }
+  header { display: grid; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 500 20px/1 var(--voice); }
+  .brand svg { flex: none; }
+  h1 { margin: 6px 0 0; font: 500 clamp(32px, 6vw, 44px)/1.12 var(--voice); text-wrap: balance; }
+  .meta { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+  .summary {
+    display: grid;
+    gap: 10px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .summary p { margin: 0; font: 500 20px/1.45 var(--voice); text-wrap: pretty; }
+  .summary ul { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .summary li { display: flex; gap: 10px; align-items: baseline; }
+  .summary li::before { content: ''; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--lamp); transform: translateY(-2px); }
+  section { display: grid; gap: 10px; min-width: 0; }
+  h2 { margin: 0; font: 500 24px/1.25 var(--voice); text-wrap: balance; }
+  p, li { max-width: 66ch; }
+  section p { margin: 0; }
+  section ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--line); background: var(--paper); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 11px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 13px; font-weight: 650; color: var(--ink-2); }
+  td:first-child { white-space: nowrap; font-weight: 600; }
+  code { font: 13.5px ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+  a { color: var(--accent); }
+  .contact { font-weight: 600; user-select: all; }
+  footer { color: var(--ink-2); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
+
+  .nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; }
+  .brand { color: var(--ink); text-decoration: none; }
+  .keybox { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 16px 18px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); }
+  .keybox code { flex: 1 1 260px; min-width: 0; overflow-wrap: anywhere; font-size: 15px; font-weight: 600; user-select: all; }
+  .btn { border: 0; border-radius: 999px; padding: 9px 16px; background: var(--accent); color: var(--paper); font: 650 14px var(--ui); cursor: pointer; }
+  :root[data-theme="dark"] .btn { color: #16151F; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #16151F; } }
+  ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+  [hidden] { display: none !important; }
+</style>
+<style>html,body{margin:0}</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <a class="brand" href="./">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5.5" fill="#403C86"/><rect x="3.6" y="6.2" width="8.6" height="12" rx="1.6" fill="#ADA8F0" transform="rotate(-20 7.9 12.2)"/><rect x="7.7" y="4.6" width="8.6" height="12" rx="1.6" fill="#E0A243" stroke="#403C86" stroke-width="1.7"/><rect x="11.8" y="6.2" width="8.6" height="12" rx="1.6" fill="#F7F6FA" stroke="#403C86" stroke-width="1.7" transform="rotate(20 16.1 12.2)"/></svg>
+      Nook
+    </a>
+    <h1>Thank you for buying Nook Lifetime</h1>
+    
+  </header>
+
+  <div class="summary" id="ok">
+    <p>If Nook is installed in this browser, Lifetime is already on. You’ll see a notification from Nook, and the Lifetime features unlock right away.</p>
+  </div>
+
+  <section id="key-section" hidden>
+    <h2>Your license key</h2>
+    <p>It’s also in your receipt email. Keep it to use Nook Lifetime on up to 3 browsers.</p>
+    <div class="keybox"><code id="key"></code><button class="btn" type="button" id="copy">Copy</button></div>
+  </section>
+
+  <section>
+    <h2>Using it in another browser</h2>
+    <ol>
+      <li>Install Nook in that browser.</li>
+      <li>Click the Nook icon, then the gear to open Settings.</li>
+      <li>Under <strong>Nook Lifetime</strong>, paste your key and click <strong>Activate</strong>.</li>
+    </ol>
+  </section>
+
+  <section id="pending" hidden>
+    <h2>Payment still processing</h2>
+    <p>Your payment hasn’t finished yet. You’ll get an email with your license key as soon as it does. If it doesn’t arrive within an hour, write to <span class="contact">entropy.atelier@gmail.com</span>.</p>
+  </section>
+
+  <section>
+    <h2>Need help?</h2>
+    <p>Write to <span class="contact">entropy.atelier@gmail.com</span>. Changed your mind? You have 14 days for a full refund; see the <a href="refund.html">refund policy</a>.</p>
+  </section>
+
+<script>
+  // The key comes from the checkout redirect. It is shown here and never sent anywhere.
+  const q = new URLSearchParams(location.search);
+  const key = (q.get('license_key') || '').split(',')[0].trim();
+  const status = q.get('status');
+  if (status && status !== 'succeeded') {
+    document.getElementById('pending').hidden = false;
+    document.getElementById('ok').hidden = true;
+  }
+  if (key) {
+    document.getElementById('key').textContent = key;
+    document.getElementById('key-section').hidden = false;
+  }
+  document.getElementById('copy').addEventListener('click', async (e) => {
+    try { await navigator.clipboard.writeText(key); e.target.textContent = 'Copied'; }
+    catch { const r = document.createRange(); r.selectNodeContents(document.getElementById('key')); getSelection().removeAllRanges(); getSelection().addRange(r); e.target.textContent = 'Selected'; }
+    setTimeout(() => { e.target.textContent = 'Copy'; }, 1600);
+  });
+  // Take the key out of the address bar once Nook has had a moment to read it.
+  if (key) setTimeout(() => history.replaceState(null, '', location.pathname), 4000);
+</script>
+
+  <footer><nav class="nav" aria-label="Legal"><a href="./">Nook</a><a href="./#pricing">Pricing</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><span>entropy.atelier@gmail.com</span></nav></footer>
+</div>
+</body>
+</html>

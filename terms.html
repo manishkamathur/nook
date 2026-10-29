@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="icon-32.png">
+<title>Nook Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+<style>
+  /* Layout: one quiet reading column, a plain summary up top, details below. */
+  :root {
+    --bg: #E8E6EE;
+    --paper: #F7F6FA;
+    --ink: #25233A;
+    --ink-2: #5E5A76;
+    --line: #D2CFDC;
+    --accent: #403C86;
+    --lamp: #D99A3D;
+    --voice: 'Lora', 'Iowan Old Style', Georgia, serif;
+    --ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16151F; --paper: #201F2C; --ink: #ECEAF4; --ink-2: #B2AEC6; --line: #34324A; --accent: #ADA8F0; --lamp: #E0A243;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16151F; --paper: #201F2C; --ink: #ECEAF4; --ink-2: #B2AEC6; --line: #34324A; --accent: #ADA8F0; --lamp: #E0A243;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 var(--ui);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 48px 72px;
+  }
+  .page { max-width: 700px; margin: 0 auto; display: grid; gap: 34px; }
+  header { display: grid; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 500 20px/1 var(--voice); }
+  .brand svg { flex: none; }
+  h1 { margin: 6px 0 0; font: 500 clamp(32px, 6vw, 44px)/1.12 var(--voice); text-wrap: balance; }
+  .meta { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+  .summary {
+    display: grid;
+    gap: 10px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .summary p { margin: 0; font: 500 20px/1.45 var(--voice); text-wrap: pretty; }
+  .summary ul { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .summary li { display: flex; gap: 10px; align-items: baseline; }
+  .summary li::before { content: ''; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--lamp); transform: translateY(-2px); }
+  section { display: grid; gap: 10px; min-width: 0; }
+  h2 { margin: 0; font: 500 24px/1.25 var(--voice); text-wrap: balance; }
+  p, li { max-width: 66ch; }
+  section p { margin: 0; }
+  section ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+  .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--line); background: var(--paper); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 11px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 13px; font-weight: 650; color: var(--ink-2); }
+  td:first-child { white-space: nowrap; font-weight: 600; }
+  code { font: 13.5px ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+  a { color: var(--accent); }
+  .contact { font-weight: 600; user-select: all; }
+  footer { color: var(--ink-2); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
+
+  .nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14.5px; }
+  .brand { color: var(--ink); text-decoration: none; }
+  .keybox { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 16px 18px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); }
+  .keybox code { flex: 1 1 260px; min-width: 0; overflow-wrap: anywhere; font-size: 15px; font-weight: 600; user-select: all; }
+  .btn { border: 0; border-radius: 999px; padding: 9px 16px; background: var(--accent); color: var(--paper); font: 650 14px var(--ui); cursor: pointer; }
+  :root[data-theme="dark"] .btn { color: #16151F; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #16151F; } }
+  ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+  [hidden] { display: none !important; }
+</style>
+<style>html,body{margin:0}</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <a class="brand" href="./">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5.5" fill="#403C86"/><rect x="3.6" y="6.2" width="8.6" height="12" rx="1.6" fill="#ADA8F0" transform="rotate(-20 7.9 12.2)"/><rect x="7.7" y="4.6" width="8.6" height="12" rx="1.6" fill="#E0A243" stroke="#403C86" stroke-width="1.7"/><rect x="11.8" y="6.2" width="8.6" height="12" rx="1.6" fill="#F7F6FA" stroke="#403C86" stroke-width="1.7" transform="rotate(20 16.1 12.2)"/></svg>
+      Nook
+    </a>
+    <h1>Terms of service</h1>
+    <p class="meta">Effective October 29, 2026.</p>
+  </header>
+
+  <div class="summary">
+    <p>Nook is free to use. Nook Lifetime is a one-time purchase that unlocks extra features in the browsers you activate it on. Payments are handled by Dodo Payments.</p>
+  </div>
+
+  <section>
+    <h2>Who we are</h2>
+    <p>Nook is made by Entropy Atelier, an independent developer (“we”). You can reach us at <span class="contact">entropy.atelier@gmail.com</span>. These terms cover the Nook browser extension, this website and Nook Lifetime purchases.</p>
+  </section>
+
+  <section>
+    <h2>Using Nook</h2>
+    <p>You may install and use Nook for free, for personal or work use. Nook stores everything you save in your own browser, so you are responsible for keeping a copy of anything important; use Export in Settings. Please don’t copy, resell or redistribute Nook, or try to get around the license check.</p>
+  </section>
+
+  <section>
+    <h2>Nook Lifetime</h2>
+    <ul>
+      <li><strong>Price.</strong> $15 USD, paid once. Early-bird codes may lower the price for a limited number of buyers. Taxes may be added at checkout depending on where you live.</li>
+      <li><strong>What you get.</strong> Saved windows, the weekly Read later reminder, fading for unread tabs, and any Lifetime features we add later, for as long as we keep offering Nook. It is not a subscription and never renews.</li>
+      <li><strong>Where it works.</strong> One license key works on up to 3 browsers at once. You can move it by removing it from a browser in Nook’s Settings.</li>
+      <li><strong>Who sells it.</strong> Dodo Payments is the merchant of record for every purchase. It processes your payment, sends your receipt and handles sales tax under its own terms, published on dodopayments.com.</li>
+      <li><strong>Refunds.</strong> See the <a href="refund.html">refund policy</a>. A refunded key stops working.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Changes to Nook</h2>
+    <p>We may improve, change or stop features over time. We won’t take away a feature you paid for without good reason, and if we ever stop offering Nook we will give at least 30 days’ notice on this website so you can export your tabs.</p>
+  </section>
+
+  <section>
+    <h2>No warranty</h2>
+    <p>Nook is provided “as is”. We work hard to make it reliable, but we can’t promise it will be free of bugs or never lose data. As far as the law allows, we are not liable for indirect losses, and our total liability to you is limited to what you paid for Nook Lifetime. Nothing in these terms limits rights you have under consumer protection law where you live.</p>
+  </section>
+
+  <section>
+    <h2>Changes to these terms</h2>
+    <p>If we change these terms, we’ll update the date above. Continuing to use Nook after a change means you accept the new terms.</p>
+  </section>
+
+  <section>
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of India, without affecting any mandatory consumer rights you have in your own country.</p>
+  </section>
+
+  <footer><nav class="nav" aria-label="Legal"><a href="./">Nook</a><a href="./#pricing">Pricing</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><span>entropy.atelier@gmail.com</span></nav></footer>
+</div>
+</body>
+</html>
