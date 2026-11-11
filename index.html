@@ -12,6 +12,7 @@
 <style>
   /* Layout: copy left and a live sorting deck right; then a numbered how-it-works run, feature rows, privacy, FAQ. */
   :root {
+    color-scheme: light;
     --bg: #F8FAFC;
     --paper: #FFFFFF;
     --paper-2: #EEF2F7;
@@ -34,24 +35,6 @@
     --shadow-lift: 0 2px 4px rgb(15 23 42 / .07), 0 24px 48px -18px rgb(15 23 42 / .38);
     --voice: 'Lora', 'Iowan Old Style', Georgia, serif;
     --ui: system-ui, -apple-system, 'Segoe UI Variable Text', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0B1120; --paper: #111A2E; --paper-2: #1A2540; --ink: #E2E8F0; --ink-2: #94A3B8; --ink-3: #64748B;
-      --line: #24314D; --accent: #60A5FA; --on-accent: #0B1120; --lamp: #FBBF24; --note: #4A3F26; --note-ink: #F3E6C4;
-      --c-read_later: #7FAEDA; --c-buying: #E08BA2; --c-todo: #E5B162; --c-research: #AE94E0; --c-reference: #6FC0B2; --c-close: #D98C8C;
-      --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px -10px rgb(0 0 0 / .6);
-      --shadow-lift: 0 2px 6px rgb(0 0 0 / .35), 0 24px 48px -18px rgb(0 0 0 / .7);
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0B1120; --paper: #111A2E; --paper-2: #1A2540; --ink: #E2E8F0; --ink-2: #94A3B8; --ink-3: #64748B;
-    --line: #24314D; --accent: #60A5FA; --on-accent: #0B1120; --lamp: #FBBF24; --note: #4A3F26; --note-ink: #F3E6C4;
-    --c-read_later: #7FAEDA; --c-buying: #E08BA2; --c-todo: #E5B162; --c-research: #AE94E0; --c-reference: #6FC0B2; --c-close: #D98C8C;
-    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px -10px rgb(0 0 0 / .6);
-    --shadow-lift: 0 2px 6px rgb(0 0 0 / .35), 0 24px 48px -18px rgb(0 0 0 / .7);
-    color-scheme: dark;
   }
 
   * { box-sizing: border-box; }

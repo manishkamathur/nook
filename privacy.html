@@ -10,6 +10,7 @@
 <style>
   /* Layout: one quiet reading column, a plain summary up top, details below. */
   :root {
+    color-scheme: light;
     --bg: #F8FAFC;
     --paper: #FFFFFF;
     --ink: #0F172A;
@@ -19,16 +20,6 @@
     --lamp: #F59E0B;
     --voice: 'Lora', 'Iowan Old Style', Georgia, serif;
     --ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0B1120; --paper: #111A2E; --ink: #E2E8F0; --ink-2: #94A3B8; --line: #24314D; --accent: #60A5FA; --lamp: #FBBF24;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0B1120; --paper: #111A2E; --ink: #E2E8F0; --ink-2: #94A3B8; --line: #24314D; --accent: #60A5FA; --lamp: #FBBF24;
-    color-scheme: dark;
   }
   body {
     background: var(--bg);
