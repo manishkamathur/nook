@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nook color schemes</title>
+  <script src="/preview/palettes.js"></script>
+  <style>
+    :root { --bg: #F4F4F5; --card: #FFFFFF; --ink: #18181B; --ink-2: #52525B; --line: #E4E4E7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    header { max-width: 1400px; margin: 0 auto; padding: 32px 24px 8px; display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: end; justify-content: space-between; }
+    h1 { font-size: 30px; letter-spacing: -.02em; margin: 0 0 4px; }
+    header p { margin: 0; color: var(--ink-2); }
+    .seg { display: inline-flex; padding: 3px; border-radius: 999px; background: #E4E4E7; }
+    .seg button { border: 0; background: transparent; padding: 7px 16px; border-radius: 999px; font: inherit; font-size: 14px; font-weight: 600; color: var(--ink-2); cursor: pointer; }
+    .seg button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+    main { max-width: 1400px; margin: 0 auto; padding: 16px 24px 48px; display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 24px; }
+    .opt { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: grid; }
+    .frame { position: relative; aspect-ratio: 1280 / 760; overflow: hidden; border-bottom: 1px solid var(--line); }
+    .frame iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 760px; border: 0; transform-origin: 0 0; pointer-events: none; }
+    .info { padding: 14px 16px 16px; display: grid; gap: 8px; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .num { font-size: 12px; font-weight: 700; color: var(--ink-2); }
+    h2 { font-size: 18px; margin: 0; letter-spacing: -.01em; }
+    .info p { margin: 0; color: var(--ink-2); font-size: 14px; }
+    .sw { display: flex; gap: 4px; }
+    .sw i { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgb(0 0 0 / .08); }
+    a { color: var(--ink); font-size: 13px; font-weight: 600; }
+    @media (max-width: 500px) { main { grid-template-columns: 1fr; padding: 16px; } header { padding: 24px 16px 4px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Nook color schemes</h1>
+      <p>Each preview is the real Nook home screen with sample tabs. Pick one by its number.</p>
+    </div>
+    <div class="seg" role="group" aria-label="Display">
+      <button data-mode="light" aria-pressed="true">Light</button>
+      <button data-mode="dark" aria-pressed="false">Dark</button>
+    </div>
+  </header>
+  <main id="grid"></main>
+  <script>
+    const grid = document.getElementById('grid');
+    let mode = 'light';
+    function draw() {
+      grid.innerHTML = '';
+      NOOK_PALETTES.forEach((p, i) => {
+        const s = p[mode];
+        const src = `/preview/nook.html?palette=${p.key}&theme=${mode}`;
+        const el = document.createElement('article');
+        el.className = 'opt';
+        el.innerHTML = `<div class="frame"><iframe src="${src}" title="${p.name} preview" tabindex="-1"></iframe></div>
+          <div class="info">
+            <div class="row"><h2><span class="num">${i + 1}.</span> ${p.name}</h2>
+              <div class="sw">${[s.bg, s.paper2, s.ink, s.ink2, s.accent].map((c) => `<i style="background:${c}" title="${c}"></i>`).join('')}</div></div>
+            <p>${p.blurb}</p>
+            <a href="${src}" target="_blank">Open full size</a>
+          </div>`;
+        grid.append(el);
+      });
+      fit();
+    }
+    function fit() {
+      document.querySelectorAll('.frame').forEach((f) => {
+        f.querySelector('iframe').style.transform = `scale(${f.clientWidth / 1280})`;
+      });
+    }
+    document.querySelector('.seg').addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b || b.dataset.mode === mode) return;
+      mode = b.dataset.mode;
+      document.querySelectorAll('.seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      draw();
+    });
+    addEventListener('resize', fit);
+    draw();
+  </script>
+</body>
+</html>

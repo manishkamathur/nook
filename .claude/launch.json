@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nook-preview",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["preview/serve.mjs", "5178"],
+      "port": 5178
+    }
+  ]
+}

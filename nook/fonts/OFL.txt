@@ -1,0 +1,8 @@
+Lora
+Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora".
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+The license is available with a FAQ at: https://openfontlicense.org
+
+The files in this folder are subsets of Lora, converted to WOFF. They are bundled
+with Nook so the extension never loads fonts from the network.
