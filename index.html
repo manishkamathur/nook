@@ -12,16 +12,16 @@
 <style>
   /* Layout: copy left and a live sorting deck right; then a numbered how-it-works run, feature rows, privacy, FAQ. */
   :root {
-    --bg: #E8E6EE;
-    --paper: #F7F6FA;
-    --paper-2: #DEDBE7;
-    --ink: #25233A;
-    --ink-2: #5E5A76;
-    --ink-3: #85819B;
-    --line: #D2CFDC;
-    --accent: #403C86;
-    --on-accent: #F7F6FA;
-    --lamp: #D99A3D;
+    --bg: #F8FAFC;
+    --paper: #FFFFFF;
+    --paper-2: #EEF2F7;
+    --ink: #0F172A;
+    --ink-2: #475569;
+    --ink-3: #94A3B8;
+    --line: #E2E8F0;
+    --accent: #2563EB;
+    --on-accent: #FFFFFF;
+    --lamp: #F59E0B;
     --note: #F6E7B8;
     --note-ink: #3A2F14;
     --c-read_later: #4E7FA8;
@@ -30,15 +30,15 @@
     --c-research: #7B5BB0;
     --c-reference: #3E8A7E;
     --c-close: #9C5A5A;
-    --shadow: 0 1px 2px rgb(37 35 58 / .06), 0 8px 24px -10px rgb(37 35 58 / .25);
-    --shadow-lift: 0 2px 4px rgb(37 35 58 / .07), 0 24px 48px -18px rgb(37 35 58 / .38);
+    --shadow: 0 1px 2px rgb(15 23 42 / .06), 0 8px 24px -10px rgb(15 23 42 / .25);
+    --shadow-lift: 0 2px 4px rgb(15 23 42 / .07), 0 24px 48px -18px rgb(15 23 42 / .38);
     --voice: 'Lora', 'Iowan Old Style', Georgia, serif;
     --ui: system-ui, -apple-system, 'Segoe UI Variable Text', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #16151F; --paper: #201F2C; --paper-2: #2A2939; --ink: #ECEAF4; --ink-2: #B2AEC6; --ink-3: #85819B;
-      --line: #34324A; --accent: #ADA8F0; --on-accent: #16151F; --lamp: #E0A243; --note: #4A3F26; --note-ink: #F3E6C4;
+      --bg: #0B1120; --paper: #111A2E; --paper-2: #1A2540; --ink: #E2E8F0; --ink-2: #94A3B8; --ink-3: #64748B;
+      --line: #24314D; --accent: #60A5FA; --on-accent: #0B1120; --lamp: #FBBF24; --note: #4A3F26; --note-ink: #F3E6C4;
       --c-read_later: #7FAEDA; --c-buying: #E08BA2; --c-todo: #E5B162; --c-research: #AE94E0; --c-reference: #6FC0B2; --c-close: #D98C8C;
       --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px -10px rgb(0 0 0 / .6);
       --shadow-lift: 0 2px 6px rgb(0 0 0 / .35), 0 24px 48px -18px rgb(0 0 0 / .7);
@@ -46,8 +46,8 @@
     }
   }
   :root[data-theme="dark"] {
-    --bg: #16151F; --paper: #201F2C; --paper-2: #2A2939; --ink: #ECEAF4; --ink-2: #B2AEC6; --ink-3: #85819B;
-    --line: #34324A; --accent: #ADA8F0; --on-accent: #16151F; --lamp: #E0A243; --note: #4A3F26; --note-ink: #F3E6C4;
+    --bg: #0B1120; --paper: #111A2E; --paper-2: #1A2540; --ink: #E2E8F0; --ink-2: #94A3B8; --ink-3: #64748B;
+    --line: #24314D; --accent: #60A5FA; --on-accent: #0B1120; --lamp: #FBBF24; --note: #4A3F26; --note-ink: #F3E6C4;
     --c-read_later: #7FAEDA; --c-buying: #E08BA2; --c-todo: #E5B162; --c-research: #AE94E0; --c-reference: #6FC0B2; --c-close: #D98C8C;
     --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px -10px rgb(0 0 0 / .6);
     --shadow-lift: 0 2px 6px rgb(0 0 0 / .35), 0 24px 48px -18px rgb(0 0 0 / .7);
@@ -89,7 +89,7 @@
   .cta:hover { filter: brightness(1.08); }
   .cta.soon { background: var(--paper-2); color: var(--ink); cursor: default; }
   .cta.soon:hover { filter: none; }
-  .cta .badge { padding: 3px 8px; border-radius: 999px; background: var(--lamp); color: #25233A; font-size: 12.5px; }
+  .cta .badge { padding: 3px 8px; border-radius: 999px; background: var(--lamp); color: #0F172A; font-size: 12.5px; }
 
   /* Hero */
   .hero {
